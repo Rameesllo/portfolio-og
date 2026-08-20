@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'Space Grotesk', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #fcfcfd;
+  }
+
+  ::selection {
+    background-color: #e0f2fe;
+    color: #0284c7;
+  }
+}
+
+/* Custom Typography & Editorial Watermark Styling */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-custom {
+  font-family: var(--font-mono);
+}
+
+/* Subtle Glowing Light Blue Accent Gradients */
+.bg-glow-radial {
+  background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15) 0%, rgba(186, 230, 253, 0.08) 40%, rgba(255, 255, 255, 0) 70%);
+}
+
+.bg-glow-subtle {
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(56, 189, 248, 0.08), transparent 40%);
+}
+
+/* Watermark Background Typography */
+.editorial-watermark {
+  font-family: var(--font-display);
+  color: #000000;
+  opacity: 0.03;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -0.05em;
+  line-height: 0.8;
+  white-space: nowrap;
+}
+
+/* Thin Border Utility */
+.border-thin {
+  border-color: rgba(226, 232, 240, 0.8);
+}
+
+/* Glassmorphism subtle panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(186, 230, 253, 0.9);
+  box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.15);
+}
+
+/* Image Color & Mobile Responsive Lighting Filter */
+.editorial-image-container {
+  overflow: hidden;
+  position: relative;
+  background-color: #f1f5f9;
+}
+
+.editorial-image {
+  /* Default: Full vivid color & bright lighting on mobile & touch devices */
+  filter: grayscale(0%) contrast(100%) brightness(100%);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Desktop Hover Interaction: Subtle artistic desaturation that illuminates on cursor hover */
+@media (min-width: 769px) and (hover: hover) {
+  .editorial-image {
+    filter: grayscale(40%) contrast(105%) brightness(98%);
+  }
+
+  .editorial-image-container:hover .editorial-image {
+    filter: grayscale(0%) contrast(100%) brightness(105%);
+    transform: scale(1.03);
+  }
+}
+
+/* Floating animation */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: subtle-float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: subtle-float 7s ease-in-out 1.5s infinite;
+}
+
+/* Keyframes for marquee ticker */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* Hide scrollbar for clean horizontal tickers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
