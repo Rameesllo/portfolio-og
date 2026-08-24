@@ -387,65 +387,176 @@ export const PROJECTS_DATA: Project[] = [
     featured: true
   },
   {
-    id: 'employee-attendance-salary',
+    id: 'llo-messaging-web-app',
     number: '04',
     title: 'LLO Messaging web app',
     slug: 'Messaging-web app',
     category: 'Messaging Web App',
-    shortDescription: 'A real-time messaging web application for LLO.',
-    fullDescription: 'A real-time messaging web application for LLO .',
+    shortDescription: 'A real-time messaging web application for LLO with instant communication and image sharing.',
+    fullDescription: 'LLO Messaging Web App is a real-time communication platform that allows users to send and receive messages instantly. The application uses Socket.IO for real-time communication, MongoDB for data storage, Cloudinary for image management, and a Node.js/Express backend deployed on Render.',
     role: 'Full-Stack Developer',
     year: '2025',
-    stack: ['React', 'MongoDB', 'Render', 'Socket.io', 'JavaScript', 'Tailwind CSS'],
+    stack: ['React', 'MongoDB', 'Render', 'Socket.io', 'JavaScript', 'Tailwind CSS', 'Cloudinary'],
     image: 'src/assets/llohome.png',
     gallery: [
+
       {
-        url: 'src/assets/llohome.png',
-        title: 'LLO Messaging Web App',
-        caption: 'Calendar view showing present, absent, half-day, and overtime hours per employee.'
+        url: 'src/assets/llo-gender.png',
+        title: 'Create User Profile',
+        caption: 'Create a user profile by entering essential details such as age and gender.'
       },
       {
-        url: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=80',
-        title: 'Payroll & Salary Slip Generator',
-        caption: 'One-click salary breakdown generation including advance deductions and bonuses.'
+        url: 'src/assets/llo-profile.png',
+        title: 'User Profile',
+        caption: 'Profile page displaying the user profile image, username, bio, and personal details.'
+      },
+      {
+        url: 'src/assets/llo-discover.png',
+        title: 'Discover Users',
+        caption: 'Discover page displaying registered users with their profile images and usernames.'
+      },
+      {
+        url: 'src/assets/llo-requsts.png',
+        title: 'Friend Requests',
+        caption: 'Friend request page where users can view incoming requests and accept or reject connection requests.'
+      },
+      {
+        url: 'src/assets/llo-chat.png',
+        title: 'Live Chat & Media Sharing',
+        caption: 'Real-time chat with instant messaging, missed calls, photo and video sharing, voice messages, emoji reactions, and message interactions.'
       }
+
     ],
-    overview: 'Created to digitize attendance registers and streamline end-of-month salary disbursement.',
-    problem: 'SMEs struggled with manual paper attendance logs, causing frequent disputes over overtime hours and salary advance balance calculations.',
-    solution: 'Developed a centralized React web portal linked to Firebase. Designed an automated payroll calculation engine that handles custom daily wages, hourly overtime rates, and advance subtractions.',
+
+
+    overview:
+      'Built a real-time messaging platform for LLO that enables users to communicate instantly through a modern web interface.',
+
+    problem:
+      'Traditional communication methods made it difficult for LLO users to communicate quickly and share information within a centralized platform.',
+
+    solution:
+      'Developed a full-stack real-time messaging application using React for the frontend, Node.js and Express.js for the backend, Socket.IO for instant communication, MongoDB for storing application data, and Cloudinary for image uploads. The backend is deployed on Render and the frontend is hosted on Vercel.',
+
     features: [
       {
-        title: 'One-Click Daily Attendance Log',
-        description: 'Rapid check-in interface for HR administrators with status filters.',
-        icon: 'Calendar'
+        title: 'Real-Time Messaging',
+        description:
+          'Users can send and receive messages instantly without manually refreshing the page.',
+        icon: 'MessageCircle'
       },
+
       {
-        title: 'Salary Advance Ledger',
-        description: 'Tracks loan advances given to staff with automatic monthly deduction split.',
-        icon: 'DollarSign'
+        title: 'Socket.IO Communication',
+        description:
+          'Socket.IO provides real-time bidirectional communication between connected users.',
+        icon: 'Zap'
       },
+
       {
-        title: 'Printable Payslip PDF Export',
-        description: 'Generates clean, detailed pay vouchers ready for digital sharing or printing.',
-        icon: 'FileText'
+        title: 'Image Sharing',
+        description:
+          'Users can upload and share images using Cloudinary cloud storage.',
+        icon: 'Image'
+      },
+
+      {
+        title: 'MongoDB Database',
+        description:
+          'User and messaging data are stored and managed using MongoDB.',
+        icon: 'Database'
+      },
+
+      {
+        title: 'Responsive Interface',
+        description:
+          'The application provides a responsive messaging experience across desktop and mobile devices.',
+        icon: 'Smartphone'
       }
     ],
+
     architectureNodes: [
-      { label: 'Admin Web Portal', subtext: 'React Single Page App', iconName: 'Monitor' },
-      { label: 'Firebase Backend', subtext: 'Authentication & Firestore Realtime DB', iconName: 'Database' }
+      {
+        label: 'React Frontend',
+        subtext: 'React + JavaScript + Tailwind CSS',
+        iconName: 'Monitor'
+      },
+
+      {
+        label: 'Node.js Backend',
+        subtext: 'Express.js REST API',
+        iconName: 'Server'
+      },
+
+      {
+        label: 'Socket.IO',
+        subtext: 'Real-Time Communication',
+        iconName: 'Zap'
+      },
+
+      {
+        label: 'MongoDB',
+        subtext: 'Application Database',
+        iconName: 'Database'
+      },
+
+      {
+        label: 'Cloudinary',
+        subtext: 'Image Storage & Delivery',
+        iconName: 'Image'
+      },
+
+      {
+        label: 'Render',
+        subtext: 'Backend Deployment',
+        iconName: 'Cloud'
+      }
     ],
+
     challenges: [
       {
-        challenge: 'Accurately computing pro-rated wages for staff with mixed daily and monthly compensation structures.',
-        solution: 'Built a flexible mathematical formula pipeline in JavaScript handling custom rules per staff contract.'
+        challenge:
+          'Implementing reliable real-time communication between multiple connected users.',
+
+        solution:
+          'Integrated Socket.IO with the Node.js backend to establish persistent real-time connections and instantly broadcast messages between users.'
+      },
+
+      {
+        challenge:
+          'Handling image uploads without storing large image files directly in the application server.',
+
+        solution:
+          'Integrated Cloudinary for cloud-based image storage and delivery while storing the required image information in MongoDB.'
+      },
+
+      {
+        challenge:
+          'Connecting the production frontend with the backend deployed separately.',
+
+        solution:
+          'Configured the React frontend and Render-hosted backend to communicate through production API endpoints and Socket.IO connections.'
       }
     ],
+
     results: [
-      { metric: '90%', label: 'Faster End-of-Month Payroll Run' },
-      { metric: '0%', label: 'Discrepancy in Advance Deductions' }
+      {
+        metric: 'Real-Time',
+        label: 'Instant Message Delivery'
+      },
+
+      {
+        metric: 'Cloud',
+        label: 'Image Storage with Cloudinary'
+      },
+
+      {
+        metric: 'Full-Stack',
+        label: 'Complete Messaging Platform'
+      }
     ],
     githubUrl: 'https://github.com/ramees/employee-attendance-salary',
-    liveUrl: 'https://payroll.ramees.dev',
+    liveUrl: 'https://llo-messaging-app-twhk.vercel.app/',
     featured: false
   }
 ];
