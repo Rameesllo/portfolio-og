@@ -1,4 +1,4 @@
-export type ProjectCategory = 'All' | 'Web Apps' | 'Full Stack' | 'Management Systems' | 'Games' | 'Messaging Web App';
+export type ProjectCategory = 'All' | 'Web Apps' | 'Full Stack' | 'AI & Management Systems' | 'Games' | 'Messaging Web App';
 
 export interface ArchitectureNode {
   label: string;
