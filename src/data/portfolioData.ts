@@ -1,4 +1,12 @@
 import type { Project, SkillItem, ExperienceItem, StatItem } from '../types/portfolio';
+import llohome from '../assets/llohome.png';
+import medicalHome from '../assets/medical-home.png';
+import lloChat from '../assets/llo-chat.png';
+import lloGender from '../assets/llo-gender.png';
+import lloDiscover from '../assets/llo-discover.png';
+import lloProfile from '../assets/llo-profile.png';
+import lloRequests from '../assets/llo-requsts.png';
+import inventoryMedical from '../assets/inventry-medical.png';
 
 export const PERSONAL_INFO = {
   name: 'Ramees',

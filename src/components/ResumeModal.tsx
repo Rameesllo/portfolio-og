@@ -1,6 +1,6 @@
 import React from 'react';
 import { X, Download, ExternalLink } from 'lucide-react';
-import resumePdf from '../assets/MOHAMMED_RAMEES_T_FlowCV_Resume_2026-06-08 (1).pdf';
+import resumePdf from '../assets/MOHAMMED_RAMEES_T_FlowCV_Resume_2026-09-02.pdf';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -13,7 +13,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = resumePdf;
-    link.download = 'MOHAMMED_RAMEES_T_FlowCV_Resume_2026.pdf';
+    link.download = 'MOHAMMED_RAMEES_T_FlowCV_Resume_2026-09-02.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
