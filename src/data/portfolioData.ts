@@ -147,12 +147,12 @@ export const PROJECTS_DATA: Project[] = [
     number: '01',
     title: 'AI-Powered ERP Management System',
     slug: 'erp-management',
-    category: 'Management Systems',
-    shortDescription: 'A full-stack enterprise ERP platform for managing inventory, purchase orders, customer ledgers, and financial insights in real-time.',
-    fullDescription: 'The ERP Management System is a comprehensive digital solution crafted for modern mid-sized businesses. It unifies inventory control, customer relations, supplier purchases, automated billing, and live business analytics under one type-safe Next.js platform powered by PostgreSQL and Prisma.',
+    category: 'AI & Management Systems',
+    shortDescription: 'A full-stack AI-powered ERP platform for managing inventory, sales, procurement, CRM, finance, and business operations through intelligent automation.',
+    fullDescription: 'The AI-Powered ERP Management System is a comprehensive digital platform that unifies inventory, sales, customer management, procurement, finance, and business analytics. It also features an AI Business Assistant that connects with real ERP data, understands natural-language requests, provides business insights, and performs authorized actions through the ERP system.',
     role: 'Full-Stack Developer',
     year: '2026',
-    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Supabase', 'Tailwind CSS'],
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma','TypeScript', 'Supabase', 'Tailwind CSS'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80',
     gallery: [
       {
@@ -176,64 +176,73 @@ export const PROJECTS_DATA: Project[] = [
         caption: 'Invoicing engine with PDF export support, credit limit enforcement, and payment tracking.'
       }
     ],
-    overview: 'Built from the ground up to replace fragmented spreadsheet workflows with a unified, high-performance web platform. Designed to handle thousands of inventory SKUs with sub-second response times.',
-    problem: 'The client faced frequent stockouts, manual data entry errors between accounting and warehouse teams, and lacked real-time visibility into profit margins across product categories.',
-    solution: 'Engineered a centralized relational database architecture using PostgreSQL and Prisma ORM. Implemented Next.js Server Actions for instant server-side mutation, optimistic UI updates, and atomic database transactions to guarantee data integrity.',
+    overview: 'Designed to showcase advanced mathematics, trigonometric vector calculations, and Canvas render loops within a React application without relying on heavy third-party physics engine libraries.',
+    problem: 'Ensuring 60fps fluid physics simulation across desktop and mobile devices while preventing pens from glitching outside edge boundaries during high-velocity collisions.',
+    solution: 'Built a lightweight custom vector math engine. Used RequestAnimationFrame with delta-time step calculations and Continuous Collision Detection (CCD) raycasting algorithms to prevent tunneling.',
     features: [
+      { 
+        title: 'AI Business Assistant',
+        description: 'AI assistant connected to real ERP data for business queries, insights, and operational assistance.',
+        icon: 'Bot' 
+      },
+     
+      {
+        title: 'AI-Powered Actions', 
+        description: 'Understands natural-language commands and performs authorized ERP actions such as creating, updating, and managing business records.',
+        icon: 'Sparkles'
+      },
+      {
+        title: 'Natural Language Understanding',
+        description: 'Handles English, Malayalam, Manglish, spelling mistakes, informal queries, and voice transcription errors.',
+        icon: 'MessageSquare'
+      },
       {
         title: 'Role-Based Authentication',
-        description: 'Granular permissions for Admins, Managers, and Warehouse Clerks using Supabase Auth & RLS policies.',
+        description: 'Granular permissions for Admins, Managers, and Staff with protected business operations.',
         icon: 'ShieldCheck'
       },
       {
         title: 'Live Stock Control',
-        description: 'Automatic deduction upon sales dispatch and stock alert triggers when threshold falls below buffer limits.',
+        description: 'Automatically updates inventory through sales and purchases with low-stock monitoring and alerts.',
         icon: 'Boxes'
       },
       {
-        title: 'Supplier & Purchase Workflow',
-        description: 'Complete purchase order cycle from quote submission to goods receipt note (GRN) verification.',
-        icon: 'Truck'
+        title: 'Sales & Procurement',
+        description: 'Manages sales orders, purchase orders, suppliers, customers, stock movements, and automated workflows.',
+        icon: 'Workflow'
       },
       {
-        title: 'Customer Ledger & Accounts',
-        description: 'Tracks customer debt aging, credit limits, transaction histories, and printable invoice generation.',
-        icon: 'Users'
+        title: 'Finance & Invoicing',
+        description: 'Automated invoice generation, payment tracking, outstanding balances, and financial monitoring.',
+        icon: 'Receipt'
       },
       {
-        title: 'Real-Time Financial Reports',
-        description: 'Dynamic charts showing profit margins, top-selling SKUs, and cash flow trends per fiscal month.',
+        title: 'Business Analytics',
+        description: 'Provides real-time insights into revenue, inventory, sales performance, and business activity.',
         icon: 'TrendingUp'
-      },
-      {
-        title: 'Sub-Second Global Search',
-        description: 'Indexed database search across products, serial numbers, customers, and invoices.',
-        icon: 'Search'
       }
+
     ],
     architectureNodes: [
-      { label: 'Client / Web UI', subtext: 'React 18 + Tailwind CSS', iconName: 'Monitor' },
-      { label: 'Next.js App Router', subtext: 'SSR, Server Actions & Edge Middleware', iconName: 'Cpu' },
-      { label: 'API Layer & ORM', subtext: 'Prisma Type-Safe Client', iconName: 'Workflow' },
-      { label: 'Relational Database', subtext: 'PostgreSQL on Supabase', iconName: 'Database' }
+       { label: 'Client / Web UI', subtext: 'React + Tailwind CSS + AI Assistant', iconName: 'Monitor' },
+       { label: 'Next.js Application', subtext: 'App Router + Server APIs + Authentication', iconName: 'Cpu' }, 
+       { label: 'AI & Business Logic', subtext: 'AI Intent Understanding + ERP Actions', iconName: 'Bot' }, 
+       { label: 'API & ORM', subtext: 'Secure APIs + Prisma Type-Safe Client', iconName: 'Workflow' }, 
+       { label: 'Relational Database', subtext: 'PostgreSQL on Supabase', iconName: 'Database' } 
     ],
     challenges: [
-      {
-        challenge: 'Maintaining transactional integrity during peak multi-user sales dispatches without causing database race conditions.',
-        solution: 'Implemented Prisma interactive database transactions ($transaction) with isolated row locking for stock updates.'
-      },
-      {
-        challenge: 'Slow report compilation when aggregating 50,000+ historical ledger entries.',
-        solution: 'Created indexed database view tables in PostgreSQL and cached analytical payloads at the server layer with Next.js revalidation tags.'
-      }
+     { challenge: 'Allowing AI to interact with real business data without giving it unrestricted database access.',
+        solution: 'Implemented controlled ERP APIs and permission-aware actions so the AI can only perform authorized operations.' },
+     { challenge: 'Understanding imperfect natural-language queries and voice transcription errors.', 
+       solution: 'Implemented intent-based query understanding with support for spelling mistakes, informal language, English, Malayalam, and Manglish.' }
     ],
     results: [
-      { metric: '99.8%', label: 'Inventory Record Accuracy' },
-      { metric: '65%', label: 'Reduction in Order Processing Time' },
-      { metric: '<120ms', label: 'Average Database Query Latency' }
+      { metric: 'AI-Powered', label: 'Business Assistant' }, 
+      { metric: 'Real-Time', label: 'ERP Data & Insights' }, 
+      { metric: 'Multi-Language', label: 'English, Malayalam & Manglish' }
     ],
-    githubUrl: 'https://github.com/ramees/erp-management-system',
-    liveUrl: 'https://erp-demo.ramees.dev',
+    githubUrl: 'https://github.com/ramees/pen-fight-game',
+    liveUrl: 'https://penfight.ramees.dev',
     featured: true
   },
   {
@@ -269,43 +278,66 @@ export const PROJECTS_DATA: Project[] = [
     problem: 'Ensuring 60fps fluid physics simulation across desktop and mobile devices while preventing pens from glitching outside edge boundaries during high-velocity collisions.',
     solution: 'Built a lightweight custom vector math engine. Used RequestAnimationFrame with delta-time step calculations and Continuous Collision Detection (CCD) raycasting algorithms to prevent tunneling.',
     features: [
-      {
-        title: 'Rigid-Body Physics Simulation',
-        description: 'Realistic momentum transfer, coefficient of restitution, and surface friction decay.',
-        icon: 'Zap'
+      { 
+        title: 'AI Business Assistant',
+        description: 'AI assistant connected to real ERP data for business queries, insights, and operational assistance.',
+        icon: 'Bot' 
       },
+     
       {
-        title: 'Drag-to-Flick Controls',
-        description: 'Intuitive touch and mouse pull-back mechanic with visual dynamic force trajectory lines.',
-        icon: 'Move'
-      },
-      {
-        title: 'Pen Customization Armory',
-        description: 'Distinct pen types (Heavy Fountain Pen, Light Ballpoint, Slick Gel Pen) with unique physics stats.',
+        title: 'AI-Powered Actions', 
+        description: 'Understands natural-language commands and performs authorized ERP actions such as creating, updating, and managing business records.',
         icon: 'Sparkles'
       },
       {
-        title: 'Local 2-Player Versus Mode',
-        description: 'Turn-based battle flow on a single screen with ring-out loss triggers.',
-        icon: 'Gamepad2'
+        title: 'Natural Language Understanding',
+        description: 'Handles English, Malayalam, Manglish, spelling mistakes, informal queries, and voice transcription errors.',
+        icon: 'MessageSquare'
+      },
+      {
+        title: 'Role-Based Authentication',
+        description: 'Granular permissions for Admins, Managers, and Staff with protected business operations.',
+        icon: 'ShieldCheck'
+      },
+      {
+        title: 'Live Stock Control',
+        description: 'Automatically updates inventory through sales and purchases with low-stock monitoring and alerts.',
+        icon: 'Boxes'
+      },
+      {
+        title: 'Sales & Procurement',
+        description: 'Manages sales orders, purchase orders, suppliers, customers, stock movements, and automated workflows.',
+        icon: 'Workflow'
+      },
+      {
+        title: 'Finance & Invoicing',
+        description: 'Automated invoice generation, payment tracking, outstanding balances, and financial monitoring.',
+        icon: 'Receipt'
+      },
+      {
+        title: 'Business Analytics',
+        description: 'Provides real-time insights into revenue, inventory, sales performance, and business activity.',
+        icon: 'TrendingUp'
       }
+
     ],
     architectureNodes: [
-      { label: 'React UI & State', subtext: 'React State & Zustand Store', iconName: 'Monitor' },
-      { label: 'Game Loop Engine', subtext: 'RequestAnimationFrame + Delta Math', iconName: 'Cpu' },
-      { label: 'Physics Collision Engine', subtext: 'Vector Trigonometry & Raycasting', iconName: 'Workflow' },
-      { label: 'HTML5 Canvas View', subtext: '60 FPS Hardware-Accelerated Context', iconName: 'Layers' }
+       { label: 'Client / Web UI', subtext: 'React + Tailwind CSS + AI Assistant', iconName: 'Monitor' },
+       { label: 'Next.js Application', subtext: 'App Router + Server APIs + Authentication', iconName: 'Cpu' }, 
+       { label: 'AI & Business Logic', subtext: 'AI Intent Understanding + ERP Actions', iconName: 'Bot' }, 
+       { label: 'API & ORM', subtext: 'Secure APIs + Prisma Type-Safe Client', iconName: 'Workflow' }, 
+       { label: 'Relational Database', subtext: 'PostgreSQL on Supabase', iconName: 'Database' } 
     ],
     challenges: [
-      {
-        challenge: 'High-speed flick collisions caused pens to pass through each other in a single frame update (tunneling bug).',
-        solution: 'Implemented sub-stepping inside the frame update to divide fast displacement into smaller step checks.'
-      }
+     { challenge: 'Allowing AI to interact with real business data without giving it unrestricted database access.',
+        solution: 'Implemented controlled ERP APIs and permission-aware actions so the AI can only perform authorized operations.' },
+     { challenge: 'Understanding imperfect natural-language queries and voice transcription errors.', 
+       solution: 'Implemented intent-based query understanding with support for spelling mistakes, informal language, English, Malayalam, and Manglish.' }
     ],
     results: [
-      { metric: '60 FPS', label: 'Smooth Frame Rate on Mobile & Desktop' },
-      { metric: '0 Dependencies', label: 'Pure Native Physics Implementation' },
-      { metric: '<45KB', label: 'Ultra-Lightweight Bundle Footprint' }
+      { metric: 'AI-Powered', label: 'Business Assistant' }, 
+      { metric: 'Real-Time', label: 'ERP Data & Insights' }, 
+      { metric: 'Multi-Language', label: 'English, Malayalam & Manglish' }
     ],
     githubUrl: 'https://github.com/ramees/pen-fight-game',
     liveUrl: 'https://penfight.ramees.dev',
