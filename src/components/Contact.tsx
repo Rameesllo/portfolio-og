@@ -169,7 +169,7 @@ export const Contact: React.FC = () => {
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Sarah Jenkins"
+                      placeholder="e.g. Ramees Llo"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none focus:border-sky-400 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all font-light"
@@ -178,12 +178,12 @@ export const Contact: React.FC = () => {
 
                   <div>
                     <label className="block text-xs font-mono-custom font-semibold uppercase tracking-wider text-slate-600 mb-2">
-                      YOUR EMAIL ADDRESS
+                      YOUR MOBILE NUMBER
                     </label>
                     <input
-                      type="email"
+                      type="number"
                       required
-                      placeholder="e.g. sarah@company.com"
+                      placeholder="e.g. 9876543210"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 focus:outline-none focus:border-sky-400 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all font-light"

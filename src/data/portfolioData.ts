@@ -145,7 +145,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: 'erp-management',
     number: '01',
-    title: 'ERP Management System',
+    title: 'AI-Powered ERP Management System',
     slug: 'erp-management',
     category: 'Management Systems',
     shortDescription: 'A full-stack enterprise ERP platform for managing inventory, purchase orders, customer ledgers, and financial insights in real-time.',
@@ -555,7 +555,7 @@ export const PROJECTS_DATA: Project[] = [
         label: 'Complete Messaging Platform'
       }
     ],
-    githubUrl: 'https://github.com/ramees/employee-attendance-salary',
+    githubUrl: 'https://github.com/Rameesllo/llo_messaging-app',  
     liveUrl: 'https://llo-messaging-app-twhk.vercel.app/',
     featured: false
   }
