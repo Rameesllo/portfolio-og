@@ -77,9 +77,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
               <h3 className="font-display font-semibold text-lg text-slate-900 uppercase tracking-tight">
                 Project Showcase
               </h3>
-              <span className="text-xs font-mono-custom text-slate-400 font-light">
-                (Auto-sliding • Swipe / Scroll)
-              </span>
+              
             </div>
 
             {/* Slider Arrow Navigation Controls */}
