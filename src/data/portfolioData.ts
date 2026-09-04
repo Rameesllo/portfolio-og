@@ -650,7 +650,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     bullets: [
       'Built a Bakery Stock Management System with automated recipe ingredient deduction and offline Firebase sync.',
       'Created an Employee Attendance & Salary System streamlining monthly payroll runs and advance tracking.',
-      'Crafted custom interactive physics simulations including an HTML5 Canvas Pen Fight Game.'
+      'Crafted custom interactive physics simulations including an HTML5 Canvas Pen Fight Games.'
     ],
     technologies: ['React', 'JavaScript', 'Firebase', 'HTML5 Canvas', 'Tailwind CSS', 'Git']
   },
