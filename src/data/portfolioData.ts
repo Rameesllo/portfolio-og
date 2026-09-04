@@ -14,6 +14,7 @@ import erpInventory from '../assets/erp-inventry.png';
 import erpProduct from '../assets/erp-product.png';
 import erpAichatmalayalam from '../assets/erp-aichatmalayalam.png';
 import eroAinavigation from '../assets/erp-ainavigation.png';
+import erpHome from '../assets/erp-home.png';
 
 export const PERSONAL_INFO = {
   name: 'Ramees',
@@ -168,7 +169,7 @@ export const PROJECTS_DATA: Project[] = [
     role: 'Full-Stack Developer',
     year: '2026',
     stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma','TypeScript', 'Supabase', 'Tailwind CSS'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80',
+    image: erpHome,
     gallery: [
      
   {

@@ -135,3 +135,149 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* First-visit identity reveal */
+.welcome-animation {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  isolation: isolate;
+  animation: welcome-exit 550ms cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-play-state: paused;
+}
+
+.welcome-animation--exit {
+  animation-play-state: running;
+}
+
+.welcome-animation__content {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(86vw, 760px);
+  text-align: center;
+}
+
+.welcome-animation__welcome,
+.welcome-animation__identity {
+  grid-area: 1 / 1;
+  margin: 0;
+}
+
+.welcome-animation__welcome {
+  font-family: var(--font-sans);
+  font-size: clamp(2.25rem, 8vw, 7rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  filter: blur(8px);
+  transform: translate3d(0, 0, 0);
+  animation: welcome-reveal 1800ms cubic-bezier(0.22, 1, 0.36, 1) 1000ms forwards;
+}
+
+.welcome-animation__identity {
+  display: grid;
+  justify-items: center;
+  gap: 0.12rem;
+  opacity: 0;
+  transform: translate3d(1.5rem, 0, 0) scale(0.98);
+  filter: blur(10px);
+}
+
+.welcome-animation--transition .welcome-animation__welcome {
+  animation: welcome-dissolve 500ms cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.welcome-animation--transition .welcome-animation__identity,
+.welcome-animation--identity .welcome-animation__identity,
+.welcome-animation--exit .welcome-animation__identity {
+  animation: identity-arrive 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.welcome-animation__to,
+.welcome-animation__portfolio {
+  font-family: var(--font-mono);
+  color: #a3a3a3;
+  font-size: clamp(0.6rem, 1.25vw, 0.8rem);
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  line-height: 1;
+}
+
+.welcome-animation__to {
+  margin-left: 0.42em;
+}
+
+.welcome-animation__name {
+  font-family: var(--font-sans);
+  font-size: clamp(3.25rem, 13vw, 10.5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.welcome-animation__portfolio {
+  margin-top: 0.45rem;
+  color: #737373;
+  letter-spacing: 0.5em;
+}
+
+.welcome-animation--reduced {
+  animation: welcome-fade-out 300ms ease 400ms forwards;
+}
+
+.welcome-animation--reduced .welcome-animation__welcome {
+  clip-path: none;
+  opacity: 1;
+  filter: none;
+  animation: welcome-fade-in 300ms ease forwards;
+}
+
+@keyframes welcome-reveal {
+  0% { clip-path: inset(0 100% 0 0); opacity: 0; filter: blur(8px); }
+  35% { opacity: 0.7; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; filter: blur(0); }
+}
+
+@keyframes welcome-dissolve {
+  0% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0); }
+  100% { opacity: 0; filter: blur(12px); transform: translate3d(-1.5rem, 0, 0) scale(1.03); }
+}
+
+@keyframes identity-arrive {
+  0% { opacity: 0; filter: blur(10px); transform: translate3d(1.5rem, 0, 0) scale(0.98); }
+  100% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes welcome-exit {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.015); pointer-events: none; }
+}
+
+@keyframes welcome-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes welcome-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; pointer-events: none; }
+}
+
+@media (max-width: 480px) {
+  .welcome-animation__welcome {
+    letter-spacing: 0.1em;
+  }
+
+  .welcome-animation__portfolio {
+    letter-spacing: 0.32em;
+  }
+}

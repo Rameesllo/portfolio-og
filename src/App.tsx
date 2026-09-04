@@ -11,13 +11,19 @@ import { Statistics } from './components/Statistics';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ResumeModal } from './components/ResumeModal';
+import { WelcomeAnimation } from './components/WelcomeAnimation';
 import { PROJECTS_DATA } from './data/portfolioData';
 import type { Project } from './types/portfolio';
 
 export function App() {
+  const [showWelcome, setShowWelcome] = useState(true);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+
+  const handleWelcomeComplete = () => {
+    setShowWelcome(false);
+  };
 
   // Track active section on scroll
   useEffect(() => {
@@ -44,6 +50,8 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#fcfcfd] text-slate-900 selection:bg-sky-100 selection:text-sky-900 font-sans antialiased relative overflow-x-hidden">
+      {showWelcome && <WelcomeAnimation onComplete={handleWelcomeComplete} />}
+
       {/* Custom Desktop Light Blue Ring Cursor */}
       <CustomCursor />
 
