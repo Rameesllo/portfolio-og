@@ -4,29 +4,78 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
 ## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Ramees Portfolio
 
-## Expanding the Oxlint configuration
+Personal portfolio website for Ramees, a full-stack developer building modern web applications and practical digital systems.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+The site showcases selected projects, technical skills, experience, statistics, contact details, and interactive project details.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Tech Stack
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- Framer Motion
+- Lucide React
+- Oxlint
+
+## Getting Started
+
+### Requirements
+
+- Node.js 20 or newer
+- npm
+
+### Install dependencies
+
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Start the development server
+
+```bash
+npm run dev
+```
+
+Vite will print the local URL in the terminal, usually `http://localhost:5173`.
+
+## Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server with hot reload |
+| `npm run build` | Type-check and create a production build |
+| `npm run lint` | Run Oxlint |
+| `npm run preview` | Preview the production build locally |
+
+## Project Structure
+
+```text
+src/
+  components/       Reusable portfolio sections and interactive views
+  data/             Personal, project, skills, and experience content
+  types/            Shared TypeScript types
+  assets/           Local images, icons, and resume files
+  App.tsx           Application shell and section navigation
+```
+
+## Updating Portfolio Content
+
+Most portfolio content is maintained in [`src/data/portfolioData.ts`](src/data/portfolioData.ts). Update the personal information, projects, skills, statistics, or experience there.
+
+Local images in `src/assets/` should be imported into TypeScript or React files and passed to image components as imported variables. This lets Vite resolve and fingerprint the files correctly for production builds.
+
+## Production Build
+
+Run the build before deploying:
+
+```bash
+npm run build
+```
+
+The generated files are written to `dist/`. The site is a client-side Vite application and can be deployed to any static hosting provider that supports SPA fallback routing.
