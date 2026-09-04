@@ -7,6 +7,7 @@ import lloDiscover from '../assets/llo-discover.png';
 import lloProfile from '../assets/llo-profile.png';
 import lloRequests from '../assets/llo-requsts.png';
 import inventoryMedical from '../assets/inventry-medical.png';
+import borrowEntry from '../assets/borrowentry.png';
 
 export const PERSONAL_INFO = {
   name: 'Ramees',
@@ -362,20 +363,20 @@ export const PROJECTS_DATA: Project[] = [
     role: 'Full-Stack Developer',
     year: '2026',
     stack: ['Next.js', 'React', 'Supabase', 'Tailwind CSS'],
-    image: 'src/assets/medical-home.png',
+    image: medicalHome,
     gallery: [
       {
-        url: 'src/assets/medical-home.png',
+        url: medicalHome,
         title: 'Equipment Catalog & Availability',
         caption: 'Live status indicators showing ready-to-lend, reserved, in-service, and under-maintenance items.'
       },
       {
-        url: 'src/assets/inventry-medical.png',
+        url: inventoryMedical,
         title: 'Admin controlling inventry',
         caption: 'Admin controlling inventry in a website.'
       },
       {
-        url: 'src/assets/borrowentry.png',
+        url: borrowEntry,
         title: 'Borrower Entry',
         caption: 'Admin entry of borrower and equipment details.'
       }
@@ -437,31 +438,31 @@ export const PROJECTS_DATA: Project[] = [
     role: 'Full-Stack Developer',
     year: '2025',
     stack: ['React', 'MongoDB', 'Render', 'Socket.io', 'JavaScript', 'Tailwind CSS', 'Cloudinary'],
-    image: 'src/assets/llohome.png',
+    image: llohome,
     gallery: [
 
       {
-        url: 'src/assets/llo-gender.png',
+        url: lloGender,
         title: 'Create User Profile',
         caption: 'Create a user profile by entering essential details such as age and gender.'
       },
       {
-        url: 'src/assets/llo-profile.png',
+        url: lloProfile,
         title: 'User Profile',
         caption: 'Profile page displaying the user profile image, username, bio, and personal details.'
       },
       {
-        url: 'src/assets/llo-discover.png',
+        url: lloDiscover,
         title: 'Discover Users',
         caption: 'Discover page displaying registered users with their profile images and usernames.'
       },
       {
-        url: 'src/assets/llo-requsts.png',
+        url: lloRequests,
         title: 'Friend Requests',
         caption: 'Friend request page where users can view incoming requests and accept or reject connection requests.'
       },
       {
-        url: 'src/assets/llo-chat.png',
+        url: lloChat,
         title: 'Live Chat & Media Sharing',
         caption: 'Real-time chat with instant messaging, missed calls, photo and video sharing, voice messages, emoji reactions, and message interactions.'
       }

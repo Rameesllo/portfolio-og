@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDown, ArrowUpRight, Code, Database, Sparkles } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import heroImage from '../assets/image copy 2.png';
 
 interface HeroProps {
   onOpenResume: () => void;
@@ -122,7 +123,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-2xl shadow-sky-100/50 group">
               {/* High-Contrast Editorial Portrait */}
               <img
-                src="src/assets/image copy 2.png"
+                src={heroImage}
                 alt="Ramees - Full Stack Developer"
                 className="w-full h-full object-cover md:grayscale md:contrast-110 md:brightness-95 md:group-hover:grayscale-0 group-hover:contrast-100 group-hover:scale-105 transition-all duration-700 ease-out"
               />
