@@ -661,7 +661,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     organization: 'EMEA Collage of Arts and Science  ',
     description: 'Focused on Core Computer Science principles, Data Structures, Relational Database Systems, Software Engineering, and Object-Oriented Programming.',
     bullets: [
-      'Graduated with strong foundation in algorithm complexity, database normalization, and web technologies.',
+      'Graduated with strong foundatio in algorithm complexity, database normalization, and web technologies.',
       'Led student tech projects and built web development solutions for local organizations.',
       'Maintained consistent focus on modern JavaScript ecosystem and production web practices.'
     ],
