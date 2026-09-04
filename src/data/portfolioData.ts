@@ -8,6 +8,12 @@ import lloProfile from '../assets/llo-profile.png';
 import lloRequests from '../assets/llo-requsts.png';
 import inventoryMedical from '../assets/inventry-medical.png';
 import borrowEntry from '../assets/borrowentry.png';
+import erpAddProduct from '../assets/erp-add-product.png';
+import erpDashboard from '../assets/erp-dashboard.png';
+import erpInventory from '../assets/erp-inventry.png';
+import erpProduct from '../assets/erp-product.png';
+import erpAichatmalayalam from '../assets/erp-aichatmalayalam.png';
+import eroAinavigation from '../assets/erp-ainavigation.png';
 
 export const PERSONAL_INFO = {
   name: 'Ramees',
@@ -164,26 +170,44 @@ export const PROJECTS_DATA: Project[] = [
     stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma','TypeScript', 'Supabase', 'Tailwind CSS'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80',
     gallery: [
-      {
-        url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-        title: 'Executive Financial Dashboard',
-        caption: 'Real-time aggregated sales revenue, gross margins, and live stock movement counters.'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-        title: 'Stock & Inventory Matrix',
-        caption: 'Multi-warehouse stock tracking with re-order threshold triggers and SKU categorization.'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=1200&q=80',
-        title: 'Purchases & Supplier Ledgers',
-        caption: 'Automated purchase order creation, batch receiving receipts, and supplier payment balances.'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
-        title: 'Customer Accounts & Billing',
-        caption: 'Invoicing engine with PDF export support, credit limit enforcement, and payment tracking.'
-      }
+     
+  {
+    url: erpDashboard,
+    title: 'ERP Dashboard',
+    caption:
+      'Centralized business dashboard providing a real-time overview of sales, inventory, revenue, business activity, and key performance metrics.'
+  },
+  {
+    url: erpInventory,
+    title: 'Inventory Management',
+    caption:
+      'Manage products, stock levels, categories, and inventory movements with real-time visibility into available and low-stock items.'
+  },
+  {
+    url: erpAddProduct,
+    title: 'Add & Manage Products',
+    caption:
+      'Create and manage products with essential details such as category, pricing, stock information, and product configuration.'
+  },
+  {
+    url: erpProduct,
+    title: 'Product Management',
+    caption:
+      'Dedicated product management interface for viewing, updating, and organizing products across the ERP system.'
+  },
+  {
+    url: erpAichatmalayalam,
+    title: 'AI Business Assistant',
+    caption:
+      'AI-powered business assistant that understands natural-language queries, including Malayalam and Manglish, and provides insights using real ERP data.'
+  },
+  {
+    url: eroAinavigation,
+    title: 'AI-Powered Navigation',
+    caption:
+      'Intelligent AI navigation that helps users quickly find and access ERP modules and business operations using natural-language commands.'
+  }
+
     ],
     overview: 'Designed to showcase advanced mathematics, trigonometric vector calculations, and Canvas render loops within a React application without relying on heavy third-party physics engine libraries.',
     problem: 'Ensuring 60fps fluid physics simulation across desktop and mobile devices while preventing pens from glitching outside edge boundaries during high-velocity collisions.',
