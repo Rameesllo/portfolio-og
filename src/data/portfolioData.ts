@@ -250,8 +250,8 @@ export const PROJECTS_DATA: Project[] = [
       { metric: 'Real-Time', label: 'ERP Data & Insights' }, 
       { metric: 'Multi-Language', label: 'English, Malayalam & Manglish' }
     ],
-    githubUrl: 'https://github.com/ramees/pen-fight-game',
-    liveUrl: 'https://penfight.ramees.dev',
+    githubUrl: 'https://github.com/Rameesllo/erp-system',
+    liveUrl: 'https://erp-system-vs3r.vercel.app/',
     featured: true
   },
   {
