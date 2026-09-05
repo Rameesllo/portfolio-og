@@ -633,7 +633,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     year: 'present',
     title: 'Full-Stack Software Engineer',
     organization: 'Independent / Product Client Engagements',
-    description: 'Architecting & deploying production-grade web applications using Next.js 15, TypeScript, PostgreSQL, and modern cloud infrastructure.',
+    description: 'Architecting & deploying production grade web applications using Next.js 15, TypeScript, PostgreSQL, and modern cloud infrastructure.',
     bullets: [
       'Engineered an enterprise ERP Management System handling inventory matrix, supplier ledgers, and real-time financial reporting.',
       'Developed modern full-stack solutions with Next.js App Router, Server Actions, Prisma ORM, and Supabase RLS security.',
